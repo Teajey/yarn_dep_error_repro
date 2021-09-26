@@ -1,0 +1,22 @@
+schema {
+  query: QueryRoot
+  mutation: MutationRoot
+}
+
+"""
+A really cool blog post
+"""
+type BlogPost {
+  id: String!
+  title: String!
+  content: String!
+  created: String!
+}
+
+type MutationRoot {
+  saveBlogPost(title: String!, content: String!): BlogPost!
+}
+
+type QueryRoot {
+  blogPosts: [BlogPost!]!
+}
